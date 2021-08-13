@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
+import socket
 import keyboard
 import asyncio
 import websockets
-
 
 async def accept(websocket, path):
     print('Connected!')
@@ -19,8 +19,10 @@ async def accept(websocket, path):
     except websockets.ConnectionClosed as exc:
         print('Connection closed')
 
+s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+s.connect(("8.8.8.8", 80))
 
-HOST = '127.0.0.1'
+HOST = s.getsockname()[0]
 PORT = 11000
 
 print('Waiting connection.....')
