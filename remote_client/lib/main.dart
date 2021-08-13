@@ -19,10 +19,10 @@ class RemoteClientApp extends StatelessWidget {
     return MaterialApp(
       title: 'Remote Client',
       theme: ThemeData(
-          brightness: Brightness.dark,
-          primaryColor: Colors.purple,
-          accentColor: Colors.cyan[600],
-          fontFamily: 'Raleway'),
+        brightness: Brightness.dark,
+        primaryColor: Colors.purple,
+        accentColor: Colors.cyan[600],
+      ),
       darkTheme: ThemeData(
         brightness: Brightness.dark,
       ),
